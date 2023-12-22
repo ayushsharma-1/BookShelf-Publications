@@ -1,0 +1,2 @@
+# AssCom-Publications
+ Successfully developed a solo project – a cutting-edge book seller app for Asscom Publications. Leveraged my expertise in mobile app development to create a seamless user experience, enhancing accessibility to Asscom's diverse range of publications. Thrived on the challenges of solo development, demonstrating both technical proficiency and a keen eye for user-centric design. Excited about the positive impact this app brings to book enthusiasts and the publishing industry
