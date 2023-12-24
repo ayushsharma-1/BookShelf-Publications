@@ -1,0 +1,354 @@
+*,
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Add your custom styles here */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+header img {
+    max-width: 200px;
+    /* Adjust the max-width as needed */
+    height: auto;
+    margin-right: 50%;
+
+}
+
+header h1 {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: rgb(255, 187, 0);
+    margin: 0;
+    font-size: 40px;
+    transition-duration: 0.4s;
+}
+
+h1:hover {
+    color: black;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    margin-right: 50px;
+    transition-duration: 0.4s;
+    font-size: 15px;
+}
+
+nav .current {
+    background-color: #555;
+}
+
+nav a:hover {
+    background-color: #555;
+    /* Change the color on hover as desired */
+    /* width: 150px; */
+    overflow: auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    padding: 0px;
+
+}
+
+.branch-list {
+    background-color: #333;
+    margin: 0px;
+    width: 20%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+}
+
+.branch-list ul {
+    flex: 1;
+    padding-right: 20px;
+    list-style-type: none;
+
+}
+
+.branch-list li {
+    display: inline-block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 00.4s;
+    padding-top: 20px;
+}
+.branch-list li a{
+    color: white;
+    text-decoration: none;
+}
+
+.branch-list li:hover {
+    background-color: #555;
+    height: 20px;
+    padding: 20px;
+    border-right: none;
+    border-radius: 0px;
+}
+
+.welcome-message {
+    flex: 1;
+}
+
+.welcome-message {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.welcome-message h2 {
+    font-size: 50px;
+    line-height: 1.5em;
+    margin-bottom: 50px;
+}
+
+.welcome-message h2 span {
+    color: rgb(255, 187, 0);
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Login Page CSS */
+
+.login-container {
+    background-color: transparent;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    margin-top: 50px;
+    margin-left: 400px;
+}
+
+.login-container h2 {
+    text-align: center;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    color: rgb(255, 187, 0);
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 400px;
+    border-radius: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(12, 12, 12);
+    margin-bottom: 20px;
+    color: rgb(1, 1, 1);
+    font-size: 20px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5em;
+}
+
+.login-container button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 40%;
+    transition-duration: 0.4s;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Registration CSS */
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 2px;
+    width: 100%;
+}
+
+.form__field {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 20px;
+    color: #141212;
+    padding: 3px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:placeholder-shown~.form__label {
+        font-size: 15px;
+        cursor: text;
+        top: 20px;
+    }
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+    ~.form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: #000000;
+        font-weight: 500;
+    }
+
+    padding-bottom: 1px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #000000, #000000);
+    border-image-slice: 1;
+}
+
+/* reset input */
+.form__field {
+
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+}
+
+
+/* -------------------------------- */
+
+button {
+    --c: #d3bb20;
+    /* the color*/
+
+    box-shadow: 0 0 0 .1em inset var(--c);
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background:
+        var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+        var(--_g) calc(200% - var(--_p, 0%)) 0%,
+        var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+        var(--_g) calc(200% - var(--_p, 0%)) 100%;
+    background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+}
+
+button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+}
+
+button:active {
+    box-shadow: 0 0 9e9q inset rgba(222, 24, 24, 0.6);
+    background-color: var(--c);
+    color: #d27f7f;
+}
+
+
+button {
+    font-family: system-ui, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    margin-left: 60px;
+    color: black;
+}
+
+.catalogue-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 0.4;
+}
+
+button:hover {
+    background-color: rgb(255, 187, 0);
+}
