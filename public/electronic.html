@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShelf | Electronics</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+        <img src="../assets/logo.png" alt="Company Logo" class="logo-img">
+    </div>
+    <div>
+        <h1>BookShelf</h1>
+    </div>
+    </header>
+
+    <!-- The rest of your content goes here -->
+
+    <nav>
+        <a href="home.html" >Home</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Registration</a>
+        <a href="catalogue.html" class="current">Catalogue</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+
+    <div class="container">
+        <div class="branch-list">
+            <ul>
+                <br>
+
+                <li><a href="computer.html">Computer Science</a></li>
+                <br>
+                <br>
+                <li><a href="electronic.html">Electronics and Communication</a></li>
+                <br>
+                <br>
+                <li><a href="electrical.html">Electrical Eng</a></li>
+                <br>
+                <br>
+                <li><a href="civil.html">Civil Eng</a></li>
+                <br>
+            </ul>
+        </div>
+        
+
+        <div class="catalogue-container">
+            <h2>Catalogue</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cover Page</th>
+                        <th>Author Name</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="../assets/electronic_1.jpg" alt="electronics_4" width="150px"></td>
+                        <td>Author 1</td>
+                        <td>$19.99</td>
+                        <td><button onclick="addToCartAndRedirect('Adam-Drozdek-JAVA', 'Author 1', 19.99)"><i class="fa fa-shopping-cart"> Add To Cart</i></button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/electronic_2.jpg" alt="Electronic_3" width="150px"></td>
+                        <td>Author 2</td>
+                        <td>$74.99</td>
+                        <td><button onclick="addToCartAndRedirect('Adam-Drozdek-JAVA', 'Author 1', 74.99)"><i class="fa fa-shopping-cart"> Add To Cart</i></button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/Electronic_3.jpg" alt="electronic_2" width="150px"></td>
+                        <td>Author 2</td>
+                        <td>$9.99</td>
+                        <td><button onclick="addToCartAndRedirect('Adam-Drozdek-JAVA', 'Author 1', 9.99)"><i class="fa fa-shopping-cart"> Add To Cart</i></button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/electronics_4.jpg" alt="electronic_1" width="150px"></td>
+                        <td>Author 2</td>
+                        <td>$3.99</td>
+                        <td><button onclick="addToCartAndRedirect('Adam-Drozdek-JAVA', 'Author 1', 3.99)"><i class="fa fa-shopping-cart"> Add To Cart</i></button></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        function addToCartAndRedirect(bookName, author, price) {
+            // Get the existing cart data from localStorage or initialize an empty array
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the new item to the cart
+            cart.push({ bookName, author, price });
+
+            // Save the updated cart back to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Redirect to the cart page
+            window.location.href = 'cart.html';
+        }
+    </script>
+</body>
+
+</html>
