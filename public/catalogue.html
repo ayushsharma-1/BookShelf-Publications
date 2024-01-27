@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
 <body>
-
     <header>
         <div class="logo">
         <img src="../assets/logo.png" alt="Company Logo" class="logo-img">
@@ -19,9 +18,6 @@
         <h1>BookShelf</h1>
     </div>
     </header>
-
-    <!-- The rest of your content goes here -->
-
     <nav>
         <a href="home.html" >Home</a>
         <a href="login.html">Login</a>
@@ -29,7 +25,6 @@
         <a href="#" class="current">Catalogue</a>
         <a href="cart.html">Cart</a>
     </nav>
-
     <div class="container">
         <div class="branch-list">
             <ul>
@@ -46,9 +41,7 @@
                 <li><a href="civil.html">Civil Eng</a></li>
                 <br>
             </ul>
-        </div>
-        
-
+        </div>   
         <div class="catalogue-container">
             <h2>Catalogue</h2>
             <table>
@@ -157,8 +150,6 @@
                         <td>$87.99</td>
                         <td><button onclick="addToCartAndRedirect('Adam-Drozdek-JAVA', 'Author 1', 87.99)"><i class="fa fa-shopping-cart"> Add To Cart</i></button></td>
                     </tr>
-                    <!-- Add more rows as needed -->
-
                 </tbody>
             </table>
         </div>
@@ -167,17 +158,13 @@
         function addToCartAndRedirect(bookName, author, price) {
             // Get the existing cart data from localStorage or initialize an empty array
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
             // Add the new item to the cart
             cart.push({ bookName, author, price });
-
             // Save the updated cart back to localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
-
             // Redirect to the cart page
             window.location.href = 'cart.html';
         }
     </script>
 </body>
-
 </html>
