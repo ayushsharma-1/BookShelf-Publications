@@ -116,11 +116,6 @@ app.get('/electronic', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'electronic.html'));
 });
 
-// Header1 route
-app.get('/header1', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'header1.html'));
-});
-
 // Loclastorage route
 app.get('/loclastorage', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'loclastorage.html'));
@@ -137,9 +132,6 @@ app.get('/registration', (req, res) => {
 });
 
 // CSS routes
-app.get('/css/header.css', (req, res) => {
-    res.sendFile(path.join(__dirname, 'css', 'header.css'));
-});
 
 app.get('/css/regisstyle.css', (req, res) => {
     res.sendFile(path.join(__dirname, 'css', 'regisstyle.css'));
