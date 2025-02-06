@@ -21,7 +21,7 @@ This repository contains the code for a cutting-edge book seller app developed f
 2. Open your browser and navigate to `http://localhost:3000`
 
 ## Technologies Used
-- React
+- HTML, CSS
 - Node.js
 - Express
 - MongoDB
